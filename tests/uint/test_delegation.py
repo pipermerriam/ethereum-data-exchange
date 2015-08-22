@@ -1,4 +1,10 @@
-def test_delegation(deployed_contracts, eth_coinbase):
+import os
+
+
+project_dir = os.path.join(os.path.dirname(__file__), 'projects/test-01')
+
+
+def test_getting_account_balance(deployed_contracts, eth_coinbase):
     master = deployed_contracts.Master
     processor = deployed_contracts.Processor
 
